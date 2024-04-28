@@ -1,9 +1,13 @@
 import { ApolloServer } from '@apollo/server';
 import { startStandaloneServer } from '@apollo/server/standalone';
 
+// IMPORT THE TYPES
+import { typeDefs } from './schema';
+
 // SETTING UP THE SERVER
 const server = new ApolloServer({
-  // typeDefs
+  // typeDefs - DEFINITION OF TYPES OF DATA [EX. DATA, GAME etc]
+  typeDefs,
   // resolvers
 });
 
