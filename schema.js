@@ -19,18 +19,22 @@ type Game {
   id: ID!
   title: String!
   platform: [String!]!
+  reviews: [Review!]
 }
 
 type Review {
   id: ID!
-  rating: String!
-  content: String!
+    rating: Int!
+    content: String!
+    author: Author!
+    game: Game!
 }
 
 type Author {
   id: ID!
   name: String!
   verified: Boolean!
+  reviews: [Review!]
 }
 
 
